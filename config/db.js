@@ -1,4 +1,4 @@
-// config/db.js
+
 require('dotenv').config();
 const mongoose = require('mongoose');
 
@@ -8,6 +8,7 @@ const connectDB = async () => {
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
     });
+
     console.log('MongoDB connected');
   } catch (error) {
     console.error('MongoDB connection error:', error);
@@ -15,4 +16,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+module.exports = connectDB; 

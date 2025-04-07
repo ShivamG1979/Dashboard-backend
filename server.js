@@ -10,7 +10,7 @@ const authRoutes = require('./routes/authRoutes');
  
 const app = express();
 app.use(cors());
-app.use(express.json()); // Instead of bodyParser.json()
+app.use(express.json());
 
 require('dotenv').config();
 // Connect to MongoDB
@@ -19,11 +19,11 @@ connectDB();
 // Seed database
 seedData();
 
-// Routes
+// Routes 
 app.use('/api/data', dataRoutes); 
 app.use('/api/auth', authRoutes);
 
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT  ;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);  
 });
